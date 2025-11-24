@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Fotografo</title>
-    <link rel="shortcut icon" href="./src/img/logo.png" type="image/x-icon">
+
+    <link rel="shortcut icon" href="./src/img/ico.jpeg" type="image/x-icon">
+
     <link rel="stylesheet" href="./src/css/index.css/index.reset.css">
     <link rel="stylesheet" href="./src/css/index.css/index.responsive.css">
     <link rel="stylesheet" href="./src/css/index.css/index.style.css">
@@ -15,37 +17,48 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
 </head>
 
 <body>
     <header class="cabecalho">
-        <a href="#">
+        <a href="./index.html">
             <h1 class="logo">
-                <img src="./src/img/logo.png" alt="Logo">
+                <img src="./src/img/icoo.jpg" alt="Logo">
             </h1>
         </a>
 
         <nav class="navegacao">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Redes sociais</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./trabalhos.html">Trabalhos</a></li>
+                <li><a href="./redes-e-contato.html">Redes e contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="principal">
-        <section class="carrocel-fotos">
-            <div>
-                <img src="#" alt="#">
-                <img src="#" alt="#">
-                <img src="#" alt="#">
-                <img src="#" alt="#">
-                <img src="#" alt="#">
+        <section class="carrossel-fotos">
+            <button class="seta seta-esq">&#10094;</button>
+
+            <div class="container-fotos">
+                <div class="slides">
+                    <img src="./src/img/01.jpg" alt="Foto 01">
+                    <img src="./src/img/02.jpg" alt="Foto 02">
+                    <img src="./src/img/03.jpg" alt="Foto 03">
+                    <img src="./src/img/04.jpg" alt="Foto 04">
+                    <img src="./src/img/05.jpg" alt="Foto 05">
+                    <img src="./src/img/06.jpg" alt="Foto 06">
+                    <img src="./src/img/07.jpg" alt="Foto 07">
+                </div>
             </div>
+
+            <button class="seta seta-dir">&#10095;</button>
         </section>
 
-        <section class="trabalhos">
+        <!-- <section class="trabalhos">
             <div class="praia"></div>
             <div class="15-anos"></div>
             <div class="make"></div>
@@ -56,18 +69,32 @@
             <div class="casal"></div>
             <div class="bebe"></div>
             <div class="eu"></div>
-        </section>
+        </section> -->
+
     </main>
 
     <footer>
         <div class="redes-sociais">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/biel_jesusdrums/" title="Ir para o Instagram" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </li>
 
+                <li>
+                    <a href="http://wa.we/55219999999" title="Ir para o WhatsApp" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> Enviar um zap
+                    </a>
+                </li>
+            </ul>
         </div>
 
-        <div class="fale-comigo">
-            
-        </div>
+        <p class="copy">&copy; 2025 Gabriel Fotografia. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="./src/js/home-index.js"></script>
 </body>
 
 </html>
