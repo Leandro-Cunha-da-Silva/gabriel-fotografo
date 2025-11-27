@@ -10,12 +10,9 @@
     }
 }
 
-@media(max-width: 495px) {
-    .container-fotos .carrossel-fotos .slides img {
-        width: 100%;
-        object-fit: cover;
-    }
-}
+/* @media(max-width: 495px) {
+    
+} */
 
 @media (max-width: 650px) {
     .cabecalho {
@@ -30,16 +27,11 @@
         max-height: 100px;
     }
 
-    .container-fotos .carrossel-fotos .seta {
-        font-size: 25px;
-    }
+    
 }
 
 @media (max-width: 730px) {
-    .container-fotos .carrossel-fotos .slides img {
-        width: 100%;
-        object-fit: cover;
-    }
+    
 
     footer {
         display: flex;
