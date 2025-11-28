@@ -6,7 +6,7 @@ body {
 
 .cabecalho {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 30px 45px;
     margin: 0 auto;
@@ -128,8 +128,15 @@ body {
 
 footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     background: #c6bfb6;
+}
+
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
 }
 
 .redes-sociais h4 {
@@ -157,8 +164,9 @@ footer {
     transform: scale(1.1);
 }
 
-.copy {
-    text-align: start;
+.copy-footer {
+    display: flex;
+    align-items: flex-end;
     margin: 20px 0;
     padding: 20px;
 }

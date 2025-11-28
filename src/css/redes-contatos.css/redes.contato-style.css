@@ -6,7 +6,7 @@ body {
 
 .cabecalho {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 30px 45px;
     margin: 0 auto;
@@ -50,10 +50,100 @@ body {
     transform: scaleX(1);
 }
 
-footer {
+.principal {
+    min-height: calc(100vh - 125px);
+    display: grid;
+    grid-template-columns: 2fr 1px 1fr;
+    grid-template-rows: auto 1fr;
+    padding: 45px;
+}
+
+.informacoes {
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.agenda {
+    padding: 0 0 25px 0;
+}
+
+.agenda h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #c6bfb6;
+}
+
+.agenda p {
+    color: #c6bfb6;
+    font-size: 21px;
+}
+
+.copy {
+    grid-column: 1;
+    align-self: center;
+    color: #c6bfb6;
+    font-size: 18px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+
+    justify-self: end;
+    margin-right: 0;
+}
+
+.principal::before {
+    content: "";
+    grid-column: 2;
+    grid-row: 2;
+    width: 1px;
+    background-color: white;
+    justify-self: center;
+}
+
+.contato {
+    grid-column: 3;
+    align-self: center;
+    color: #c6bfb6;
+    font-size: 18px;
+    padding: 25px;
+}
+
+.redes-contatos {
     display: flex;
     flex-direction: column;
+    margin: 20px;
+    gap: 25px;
+}
+
+.redes-contatos ul li a {
+    color: #c6bfb6;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.redes-contatos ul li a:hover {
+    color: black;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     background: #c6bfb6;
+}
+
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
 }
 
 .redes-sociais h4 {
@@ -81,8 +171,9 @@ footer {
     transform: scale(1.1);
 }
 
-.copy {
-    text-align: start;
+.copy-footer {
+    display: flex;
+    align-items: flex-end;
     margin: 20px 0;
     padding: 20px;
 }
