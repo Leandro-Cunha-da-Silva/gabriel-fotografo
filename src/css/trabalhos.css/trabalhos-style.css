@@ -57,6 +57,15 @@ body {
     justify-content: center;
 }
 
+.principal {
+    display: flex;
+    text-align: center;
+}
+
+.principal p {
+    font-size: 50px;
+}
+
 
 footer {
     display: flex;
