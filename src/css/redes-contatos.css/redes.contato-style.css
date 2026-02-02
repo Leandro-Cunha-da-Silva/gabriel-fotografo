@@ -53,9 +53,9 @@ body {
 .principal {
     min-height: calc(100vh - 125px);
     display: grid;
-    grid-template-columns: 2fr 1px 1fr;
     grid-template-rows: auto 1fr;
     padding: 45px;
+    justify-content: center;
 }
 
 .informacoes {
@@ -80,19 +80,6 @@ body {
     font-size: 21px;
 }
 
-.copy {
-    grid-column: 1;
-    align-self: center;
-    color: #c6bfb6;
-    font-size: 18px;
-    padding: 20px;
-    max-width: 600px;
-    width: 100%;
-
-    justify-self: end;
-    margin-right: 0;
-}
-
 .principal::before {
     content: "";
     grid-column: 2;
@@ -102,7 +89,19 @@ body {
     justify-self: center;
 }
 
+.copy {
+    align-self: center;
+    color: #c6bfb6;
+    font-size: 18px;
+    padding: 20px;
+    max-width: 600px;
+    justify-self: end;
+}
+
 .contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     grid-column: 3;
     align-self: center;
     color: #c6bfb6;
@@ -112,9 +111,6 @@ body {
 
 .redes-contatos {
     display: flex;
-    flex-direction: column;
-    margin: 20px;
-    gap: 25px;
 }
 
 .redes-contatos ul li a {
