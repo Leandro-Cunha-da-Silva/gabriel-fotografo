@@ -1,4 +1,4 @@
-@media (max-width: 495px) {
+@media (max-width: 480px) {
     .cabecalho .navegacao ul {
         gap: 10px;
     }
@@ -27,7 +27,6 @@
         max-height: 100px;
     }
 
-    
 }
 
 @media (max-width: 730px) {

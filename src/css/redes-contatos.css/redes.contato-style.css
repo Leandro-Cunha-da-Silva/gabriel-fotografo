@@ -123,6 +123,12 @@ body {
     transition: 0.3s;
 }
 
+.redes-contatos ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .redes-contatos ul li a:hover {
     color: black;
     transform: scale(1.1);
