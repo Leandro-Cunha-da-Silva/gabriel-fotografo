@@ -57,6 +57,9 @@ body {
     justify-content: center;
 }
 
+.container-fotos {
+    height: auto;
+}
 
 .carrossel-fotos {
     position: relative;

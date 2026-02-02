@@ -10,10 +10,14 @@
     }
 }
 
-@media(max-width: 495px) {
+@media(max-width: 480px) {
     .container-fotos .carrossel-fotos .slides img {
         width: 100%;
         object-fit: cover;
+    }
+
+    .principal {
+        min-height: 0;
     }
 }
 
@@ -55,5 +59,11 @@
     .redes-sociais h4 {
         display: flex;
         text-align: center;
+    }
+}
+
+@media (max-width: 1920px) {
+    .principal {
+        min-height: 0;
     }
 }
