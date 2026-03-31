@@ -41,7 +41,7 @@ imagemGrande.addEventListener("click", () => {
 
     if (zoomAtivo) {
         imagemGrande.classList.add("zoom");
-        imagemGrande.style.cursor ="zoom-out";
+        imagemGrande.style.cursor = "zoom-out";
         imagemGrande.style.transition = "transform 0.1s ease-out";
         imagemGrande.style.transform = `scale(${zoomScale})`;
     } else {
