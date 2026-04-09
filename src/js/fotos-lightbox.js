@@ -42,7 +42,7 @@ imagemGrande.addEventListener("click", () => {
     if (zoomAtivo) {
         imagemGrande.classList.add("zoom");
         imagemGrande.style.cursor = "zoom-out";
-        imagemGrande.style.transition = "transform 0.1s ease-out";
+        imagemGrande.style.transition = "transform 0.2s ease-out";
         imagemGrande.style.transform = `scale(${zoomScale})`;
     } else {
         resetZoom();
@@ -54,11 +54,16 @@ imagemGrande.addEventListener("mousemove", (e) => {
 
     const rect = imagemGrande.getBoundingClientRect();
 
-    const x = (e.clientX - rect.left) / rect.width;
-    const y = (e.clientY - rect.top) / rect.height;
+    let x = (e.clientX - rect.left) / rect.width;
+    let y = (e.clientY - rect.top) / rect.height;
 
-    const moveX = (x - 0.5) * rect.width;
-    const moveY = (y - 0.5) * rect.height;
+    x = Math.max(0, Math.min(1, x));
+    y = Math.max(0, Math.min(1, y));
+
+    const intensidade = 0.6;
+
+    const moveX = (x - 0.5) * rect.width * intensidade;
+    const moveY = (y - 0.5) * rect.height * intensidade;
 
     imagemGrande.style.transform = `scale(${zoomScale}) translate(${-moveX / zoomScale}px, ${-moveY / zoomScale}px)`;
 });
