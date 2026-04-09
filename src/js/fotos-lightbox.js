@@ -2,6 +2,12 @@ const imagens = document.querySelectorAll(".fotos img");
 const lightbox = document.getElementById("lightbox");
 const imagemGrande = document.getElementById("imagemGrande");
 
+// Mobile inico das variáveis
+let touchStartX = 0;
+let touchStartY = 0;
+let currentTranslateX = 0;
+let currentTranslateY = 0;
+// Fim da variavél mobile
 
 let indexAtual = 0;
 
@@ -30,6 +36,9 @@ const zoomScale = 2;
 
 function resetZoom() {
     zoomAtivo = false;
+    currentTranslateX = 0;
+    currentTranslateY = 0;
+
     imagemGrande.classList.remove("zoom");
     imagemGrande.style.transform = "scale(1)";
     imagemGrande.style.cursor = "zoom-in";
@@ -109,3 +118,52 @@ document.addEventListener("keydown", (e) => {
         fecharLightbox();
     }
 });
+
+
+
+
+// Mobile - início dos eventos de toque
+imagemGrande.addEventListener("touchstart", (e) => {
+    const touch = e.touches[0];
+
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+});
+
+imagemGrande.addEventListener("touchmove", (e) => {
+    const touch = e.touches[0];
+
+    const deltaX = touch.clientX - touchStartX;
+    const deltaY = touch.clientY - touchStartY;
+
+    if (zoomAtivo) {
+        e.preventDefault();
+
+        const intensidade = 1;
+
+        currentTranslateX += deltaX * intensidade;
+        currentTranslateY += deltaY * intensidade;
+
+        imagemGrande.style.transform = `scale(${zoomScale}) translate(${currentTranslateX}px, ${currentTranslateY}px)`;
+
+        touchStartX = touch.clientX;
+        touchStartY = touch.clientY;
+    }
+});
+
+imagemGrande.addEventListener("touchend", (e) => {
+    if (zoomAtivo) return;
+
+    const touch = e.changedTouches[0];
+    const deltaX = touch.clientX - touchStartX;
+    const limite = 50;
+
+    if (deltaX > limite) {
+        indexAtual = (indexAtual - 1 + imagens.length) % imagens.length;
+        atualizarImagem();
+    } else if (deltaX < -limite) {
+        indexAtual = (indexAtual + 1) % imagens.length;
+        atualizarImagem();
+    }
+});
+

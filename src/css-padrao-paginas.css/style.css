@@ -115,6 +115,7 @@ body {
     cursor: zoom-in;
     transition: transform 0.15s ease-out;
     user-select: none;
+    touch-action: none;
 }
 
 .imagem-grande.zoom {
