@@ -72,7 +72,7 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin: 20px;
     justify-content: center;
 }
 
